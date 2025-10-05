@@ -1,0 +1,197 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 40px;
+    background: #f7f7f7;
+    text-align: center;
+}
+
+h1 {
+    color: #222
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    background-color: #000000;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.menu a:hover {
+    background-color: #444;
+}
+
+footer {
+    text-decoration: none;
+    color: #353c44;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* ====== TASK 0: Responsive Typography ====== */
+.typography h2 {
+  color: #222;
+  font-size: 20px;
+}
+
+.typography p {
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+  color: #444;
+}
+
+/* 📱 Mobile: до 575px */
+@media (max-width: 575px) {
+  .typography h2 {
+    font-size: 20px;
+  }
+  .typography p {
+    font-size: 14px;
+  }
+}
+
+/* 💻 Tablet: от 576px до 991px */
+@media (min-width: 576px) and (max-width: 991px) {
+  .typography h2 {
+    font-size: 26px;
+  }
+  .typography p {
+    font-size: 16px;
+  }
+}
+
+/* 🖥️ Desktop: от 992px и выше */
+@media (min-width: 992px) {
+  .typography h2 {
+    font-size: 32px;
+  }
+  .typography p {
+    font-size: 18px;
+  }
+}
+
+
+/* ====== TASK 1: Responsive Boxes ====== */
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;        /* позволяет перенос строк */
+  justify-content: center;
+  gap: 10px;
+  margin: 40px auto;
+  max-width: 900px;
+}
+
+.box {
+  background-color: lightblue;
+  color: #222;
+  text-align: center;
+  padding: 50px 0;
+  border-radius: 10px;
+  font-weight: bold;
+  flex: 1 1 100%;         /* по умолчанию занимает всю ширину (mobile) */
+}
+
+/* 💻 Tablet (576px–991px): 2 бокса в ряд */
+@media (min-width: 576px) and (max-width: 991px) {
+  .box {
+    flex: 1 1 calc(50% - 10px);
+  }
+}
+
+/* 🖥️ Desktop (≥992px): 3 бокса в ряд */
+@media (min-width: 992px) {
+  .box {
+    flex: 1 1 calc(33.333% - 10px);
+  }
+}
+
+
+/* ====== TASK 2: Bootstrap Grid ====== */
+
+.grid-box {
+  background-color: #b3d9ff;
+  padding: 60px 0;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #222;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+
+/* ====== TASK 3: Bootstrap Navbar ====== */
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.navbar-nav .nav-link {
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #00bfff !important;
+}
+
+
+.card {
+  border-radius: 10px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+}
+
+.card h5 {
+  font-weight: bold;
+}
+
+aside {
+  border: 1px solid #ddd;
+}
+
+footer a {
+  color: #00bfff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 575px) {
+  h2 {
+    font-size: 22px;
+  }
+  .card p, aside p {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991px) {
+  h2 {
+    font-size: 26px;
+  }
+}
+
+@media (min-width: 992px) {
+  h2 {
+    font-size: 30px;
+  }
+}
